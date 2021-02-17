@@ -11,7 +11,7 @@
                   <i class="fas fa-edit"></i> <%#Font Awesomeを導入することで、Web上でよく利用されるアイコンをアイコンフォントという文字として使える。fa-editはアイコン名%>
                 <% end %>
               </li>
-              <li><%= link_to "サインアウト", "#", class: "nav-link" %></li>
+              <li><%= link_to "サインアウト",destroy_user_session_path,method: :delete, class: "nav-link" %></li>
             </ul>
           </li>
         </ul>
