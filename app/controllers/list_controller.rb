@@ -18,6 +18,11 @@ class ListController < ApplicationController
   def edit
   end
 
+  def destroy
+    @list.destroy
+    redirect_to :root
+  end
+
   def update
     if @list.update_attributes(list_params) #update_attributesメソッドは属性のハッシュを受け取り、成功時には更新と保存を続けて同時に行う。
       redirect_to :root
